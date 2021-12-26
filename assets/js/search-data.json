@@ -1,11 +1,22 @@
 {
   
+    
+        "post0": {
+            "title": "BRONZE 5등급 문제풀이",
+            "content": "2021.12.23 . 1000&#48264; . lista=[&#39;3454&#39;,&#39;342&#39;,&#39;223&#39;] . lista=list(map(int,lista)) . lista . [3454, 342, 223] . [a,b] = map(int, input().split(&#39; &#39;)) print(a+b) . 18446744073709551615 . input()만 하면 str 형태로 &#39;a b&#39; 이렇게 저장됨 . | 따라서 split(&#39; &#39;) 또는 split()를 통해 list 형태 만듦. . | 그리고 map 함수를 통해 list형태에서 int형으로 변환 할 수 있음 . | . 첫째줄에 동시에 입력해야 해서 map함수를 사용한 것 . 2338번과 비교하기 . 1001&#48264; . (a,b) = map(int, input().split(&#39; &#39;)) print(a-b) . 1 . 1271&#48264; . (a,b) = map(int, input().split(&#39; &#39;)) print(a//b) print(a%b) . . 2021.12.24 . 1550번 16진수 이해 안 감 . 2338번 . a = int(input()) b = int(input()) print(a+b) print(a-b) print(a*b) . 6 -4 5 . input만 하면 str으로 저장됨 . 2475번 . (a,b,c,d,e) = map(int, input().split(&#39; &#39;)) print((a**2+b**2+c**2+d**2+e**2)%10) . 1 . res = 0 for n in list(map(int, input().split())): res += n**2 print(res%10) . 1 . print(sum([n**2 for n in map(int, input().split())]) % 10) . 7 . 2557번 . 내 생각엔 이거 같은데.. . if (input()==&quot;&quot;) : print(&#39;Hello World!&#39;) . Hello World! . 이거란다. . print(&#39;Hello World!&#39;) . Hello World! . 2558번 . a = int(input()) b = int(input()) print(a+b) . 3 . 2845번 . [a,b]=map(int,input().split()) [c,d,e,f,g]=map(int,input().split()) print(c-a*b,d-a*b,e-a*b,f-a*b,g-a*b) . -1 1 900 -100 -3 . a, b = map(int, input().split()) people = list(map(int, input().split())) tot = a * b for i in people: print(i - tot, end=&#39; &#39;) . -395 -394 -392 -396 -391 . 위 셀을 보면 마지막 줄에서 포문을 실행하고 있는데, 한번씩 실행하므로 원래대로라면 하나 출력하고 다음줄에 출력 다음줄에 출력 이런식으로 진행이 된다. 그런데 print 옵션 중 end=&#39;&#39; 안에 원래 n 적당한 수를 입력해줘야 하는데 빈 문자열을 지정해주면 다음 번 출력이 아래로 가는 게 아니라 바로 뒤로 출력되게 해줄 수 있다. default값으로는 프린트해야되는 개수 만큼 n이 입력되어 있고 빈문자열을 지정해줌으로써 강제로 n을 지워주는 것이다. . 출력문 print는 두개의 옵션이 있음 . sep=&#39;&#39; -&gt; print문의 출력문들 사이에 원하는 내용을 넣을 수 있다, 기본값으로는 공백이 들어간다. 여기서 n을 입력해주면 print해야하는 개수만큼 아래줄로 넘어가고 출력하게 된다 . end=&#39;&#39; -&gt; 출력을 완료한 뒤의 내용을 수정할 수 있다. 기본 값으로는 개행 . | . print(&#39;a&#39;,&#39;c&#39;,&#39;a&#39;,&#39;s&#39;,sep=&#39; n&#39;) . a c a s . 2914번 . a,b=map(int,input().split()) print((a*(b-1))+1) . 4929 . 3003번 . a,b,c,d,e,f=map(int,input().split()) print(1-a,1-b,2-c,2-d,2-e,8-f) . -1 0 0 1 0 7 . 3046번 . a,b=map(int,input().split()) print(-(a-2*b)) . 19 . 5337번 . print(&quot;&quot;&quot; . . . | | _ | _. _ ._ _ _ |/ |(/.|(_.(_)[ | )(/. &quot;&quot;&quot;) . . . . | | _ | _. _ ._ _ _ |/ |(/.|(_.(_)[ | )(/. . print에서 줄 바꿈 하는 방법 . &quot;&quot;&quot;~&quot;&quot;&quot; 또는 print(asd nasd nasd)을 활용 | str에서만 활용가능해보임 | . print(&quot;asd nasd nasd&quot;) . asd asd asd . 5338번 . print(&quot;&quot;&quot; _.-;;-._ &#39;-..-&#39;| || | &#39;-..-&#39;|_.-;;-._| &#39;-..-&#39;| || | &#39;-..-&#39;|_.-&#39;&#39;-._| &quot;&quot;&quot;) . _.-;;-._ &#39;-..-&#39;| || | &#39;-..-&#39;|_.-;;-._| &#39;-..-&#39;| || | &#39;-..-&#39;|_.-&#39;&#39;-._| . 5522번 . a=int(input()) b=int(input()) c=int(input()) d=int(input()) e=int(input()) print(a+b+c+d+e) . 15 . 5554번 . a=int(input()) b=int(input()) c=int(input()) d=int(input()) print((a+b+c+d)//60) print((a+b+c+d)%60) . sum = 0 for _ in range(4) : sum += int(input()) print(sum // 60) print(sum % 60) . 7934 21 . 6749번 . a=int(input()) b=int(input()) print(b+b-a) . 18 . 8393번 . a=int(input()) print(round((a*(a+1))/2)) . 6 . round(555.3666,2) #반올림해서 나타낼 자릿수 . 555.37 . 10699번 . import datetime print(str(datetime.datetime.now())[:10]) . 2021-12-24 . 10962번 . print(input()+&quot;??!&quot;) . kds??! . 11283번 . print(ord(input())-44031) . 254 . 14652번 . N, M, K = map(int, input().split()) n = K // M m = K % M print(n, m) . 1 2 . 2021.12.25 MERRY CHISTMAS . 15727번 . import math a=int(input())/5 print(math.ceil(a)) . 18 . 15894번 . print(4*(int(input()))) . 218616 . 16430번 . from fractions import Fraction a,b=map(int,input().split()) c=str(1-Fraction(a,b)) print(c[0],c[2]) . 3 8 . 분수!! | . str(2-Fraction(2,3)) . &#39;4/3&#39; . 17496번 . a,b,c,d=map(int,input().split()) if (a%b != 0) : print((a//b)*c*d) elif (a%b == 0): print(((a//b)-1)*c*d) . 0 . 20492번 . a=int(input()) print(int(a*0.78),int(a-a*0.2*0.22)) . 780 956 .",
+            "url": "https://rhkrehtjd.github.io/solution/2021/12/23/bronze5.html",
+            "relUrl": "/2021/12/23/bronze5.html",
+            "date": " • Dec 23, 2021"
+        }
+        
+    
+  
 
   
   
 
   
-      "page1": {
+      ,"page1": {
           "title": "About Me",
           "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://rhkrehtjd.github.io/solution/about/",
